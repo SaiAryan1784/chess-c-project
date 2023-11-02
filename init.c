@@ -17,7 +17,16 @@ void InitSq120To64() {
     for(index = 0; index < y4; ++index){
         Sq64ToSq120[index] = 120;
     }
+
+    for(rank = RANK_1; <= RANK_8; ++rank){
+        for(file = FILE_A; file<=FILE_H ; ++file){
+            sq = FR2SQ(file, rank);
+            Sq64ToSq120[sq64] = sq;
+            Sq120ToSq64[sq] = sq64;
+            sq64++;
+        }
+    }
 }
 void Allinit(){
-
+    InitSq120To64();
 }
