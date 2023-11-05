@@ -6,7 +6,7 @@
 #define DEBUG
 
 #ifndef DEBUG
-#define ASSERT(n)
+// #define ASSERT(n)
 #else 
 #define ASSERT(n)
 if(!(n)) {
@@ -99,5 +99,7 @@ extern int Sq64ToSq120[64];
 // Function
 
 extern void AllInit();
+
+extern void PrintBitBoard(U64 bb);
 
 #endif

@@ -5,6 +5,16 @@ int main()
 {
     AllInit();
 
+    U64 playBitBoard = 0ULL;
+
+    printf("Start:\n")
+    PrintBitBoard(playBitBoard);
+
+    playBitBoard |= (1ULL << SQ64(G2));
+
+    printf("D2 Start:\n\n")
+    PrintBitBoard(playBitBoard);
+
     // for(index = 0; index < BRD_SQ_NUM; ++index){
     //     if(index%10==0) printf("\n");
     //     printf("%5d", Sq64ToSq120[index]);
@@ -17,11 +27,6 @@ int main()
     //     if(index%8==0)printf("\n");
     //     printf("%5d",Sq64ToSq120[index]);
     // }
-
-    int num = 2;
-    int nuts = 4;
-
-    ASSERT(num==nuts);
 
     return 0;
 }
