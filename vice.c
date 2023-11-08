@@ -15,8 +15,11 @@ int main()
     // PrintBitBoard(playBitBoard);
 
     // printf("D2 Start:\n\n")
-    printf("\n");
-    PrintBitBoard(playBitBoard);
+
+
+    // printf("\n");
+    // PrintBitBoard(playBitBoard);
+
 
     // for(index = 0; index < BRD_SQ_NUM; ++index){
     //     if(index%10==0) printf("\n");
@@ -31,16 +34,21 @@ int main()
     //     printf("%5d",Sq64ToSq120[index]);
     // }
 
-    int count = CNT(playBitBoard);
+    // int count = CNT(playBitBoard);
 
-    printf("Count: %d\n",count);
+    // printf("Count: %d\n",count);
 
-    int index = POP(&playBitBoard);
-    printf("index:%d\n",index);
-    PrintBitBoard(playBitBoard);
+    // int index = POP(&playBitBoard);
+    // printf("index:%d\n",index);
+    // PrintBitBoard(playBitBoard);
 
-    int count = CNT(playBitBoard);
-    printf("Count: %d\n",count);
+    // int count = CNT(playBitBoard);
+    // printf("Count: %d\n",count);
+
+    // int sq64 = 0;
+    // while(playBitBoard){
+
+    // }
 
     return 0;
 }
