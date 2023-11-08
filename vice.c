@@ -7,12 +7,15 @@ int main()
 
     U64 playBitBoard = 0ULL;
 
-    printf("Start:\n")
-    PrintBitBoard(playBitBoard);
+    playBitBoard |= (1ULL << SQ64(D2));
+    playBitBoard |= (1ULL << SQ64(D3));
+    playBitBoard |= (1ULL << SQ64(D4));
 
-    playBitBoard |= (1ULL << SQ64(G2));
+    // printf("Start:\n")
+    // PrintBitBoard(playBitBoard);
 
-    printf("D2 Start:\n\n")
+    // printf("D2 Start:\n\n")
+    printf("\n");
     PrintBitBoard(playBitBoard);
 
     // for(index = 0; index < BRD_SQ_NUM; ++index){
@@ -27,6 +30,17 @@ int main()
     //     if(index%8==0)printf("\n");
     //     printf("%5d",Sq64ToSq120[index]);
     // }
+
+    int count = CNT(playBitBoard);
+
+    printf("Count: %d\n",count);
+
+    int index = POP(&playBitBoard);
+    printf("index:%d\n",index);
+    PrintBitBoard(playBitBoard);
+
+    int count = CNT(playBitBoard);
+    printf("Count: %d\n",count);
 
     return 0;
 }
