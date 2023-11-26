@@ -3,14 +3,23 @@
 
 int main(){
     AllInit();
-    int index = 0;
-    U64 playBitBoard = 0ULL;
+    
+    int PieceOne = rand();
+    int PieceTwo = rand();
+    int PieceThree = rand();
+    int PieceFour = rand();
 
-    for(int index=0;i<64;index++){
-        printf("Index: %d",index);
-        PrintBitBoard(SetMask[index]);
-        printf("\n");
-    }
+    printf("PieceOne:%X\n",PieceOne);
+    printf("PieceTwo:%X\n",PieceTwo);
+    printf("PieceThree:%X\n",PieceThree);
+    printf("PieceFour:%X\n",PieceFour);
 
+    int key = PieceOne ^ PieceTwo ^ PieceThree ^ PieceFour ;
+    int TempKey = PieceOne;
+    TempKey ^= PieceTwo;
+    TempKey ^= PieceThree;
+    TempKey ^= PieceFour;
+
+    
     return 0;
 }
